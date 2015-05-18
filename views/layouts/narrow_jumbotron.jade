@@ -1,0 +1,57 @@
+include ../bootstrap
+doctype html
+html(lang="en")
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+  meta(name='description', content='')
+  meta(name='author', content='')
+  link(rel='icon', href='../../favicon.ico')
+  title Narrow Jumbotron Template for Bootstrap
+  // Bootstrap core CSS
+  link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+  // Custom styles for this template
+  link(href='/css/jumbotron-narrow.css', rel='stylesheet')
+
+.container
+  .header.clearfix
+    nav
+      ul.nav.nav-pills.pull-right
+        li.active(role='presentation')
+          a(href='#') Home
+        li(role='presentation')
+          a(href='#') About
+        li(role='presentation')
+          a(href='#') Contact
+    h3.text-muted Project name
+  .jumbotron
+    h1 Jumbotron heading
+    p.lead
+      | Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+    p
+      a.btn.btn-lg.btn-success(href='#', role='button') Sign up today
+  .row.marketing
+    .col-lg-6
+      h4 Subheading
+      p
+        | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      h4 Subheading
+      p
+        | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      h4 Subheading
+      p Maecenas sed diam eget risus varius blandit sit amet non magna.
+    .col-lg-6
+      h4 Subheading
+      p
+        | Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.
+      h4 Subheading
+      p
+        | Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.
+      h4 Subheading
+      p Maecenas sed diam eget risus varius blandit sit amet non magna.
+  footer.footer
+    p © Company 2014
+// /container
+
