@@ -1,0 +1,177 @@
+include ../bootstrap
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		// The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+		meta(name="description", content="")
+		meta(name="author", content="")
+		link(rel="icon", href="../../favicon.ico")
+		title Carousel Template for Bootstrap
+		// Bootstrap core CSS
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		// Custom styles for this template 
+		link(href="/css/carousel.css", rel="stylesheet")
+	// NAVBAR
+	// ================================================== 
+	body
+		.navbar-wrapper
+			.container
+				nav.navbar.navbar-inverse.navbar-static-top
+					.container
+						.navbar-header
+							button(type="button" ,class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar" ,aria-expanded="false", aria-controls="navbar")
+								span.sr-only Toggle navigation
+								span.icon-bar
+								span.icon-bar
+								span.icon-bar
+								
+							a(class="navbar-brand", href="#") Project name
+						#navbar.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li.active
+									a(href="#") Home
+								li
+									a(href="#about") About
+								li
+									a(href="#contact") Contact
+								li.dropdown
+									a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+										| Dropdown 
+										span.caret
+									ul.dropdown-menu(role='menu')
+										li
+											a(href='#') Action
+										li
+											a(href='#') Another action
+										li
+											a(href='#') Something else here
+										li.divider
+										li.dropdown-header Nav header
+										li
+											a(href='#') Separated link
+										li
+											a(href='#') One more separated link
+								
+		// Carousel
+		// ==================================================
+		#myCarousel.carousel.slide(data-ride="carousel")
+			// Indicators
+			ol.carousel-indicators
+				li(data-target="#myCarousel", data-slide-to="0", class="active")
+				li(data-target="#myCarousel", data-slide-to="1")
+				li(data-target="#myCarousel", data-slide-to="2")
+			.carousel-inner(role="listbox")
+				.item.active
+					img.first-slide(src="/images/carousel1.jpg", alt="First slide")
+					.container
+						.carousel-caption
+							h1 Example headline.
+							p Note: If you're viewing this page via a codefile:///code URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.
+							p
+								a.btn.btn-lg.btn-primary(href="#", role="button") Sign up today
+				.item
+					img.second-slide(src="/images/carousel2.jpg", alt="Second slide")
+					.container
+						.carousel-caption
+							h1 Another example headline.
+							p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							p
+								a(class="btn btn-lg btn-primary", href="#", role="button") Learn more
+			
+				.item
+					img(class="third-slide", src="/images/carousel3.jpg", alt="Third slide")
+					.container
+						.carousel-caption
+							h1 One more for good measure.
+							p Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+							p
+								a(class="btn btn-lg btn-primary" ,href="#" ,role="button") Browse gallery
+			a(class="left carousel-control", href="#myCarousel", role="button", data-slide="prev")
+				span(class="glyphicon glyphicon-chevron-left", aria-hidden="true")
+				span(class="sr-only") Previous
+			a(class="right carousel-control", href="#myCarousel", role="button", data-slide="next")
+				span(class="glyphicon glyphicon-chevron-right", aria-hidden="true")
+				span(class="sr-only") Next
+
+
+
+		//  Marketing messaging and featurettes
+		//  ==================================================
+		// Wrap the rest of the page in another container to center all the content.
+		.container.marketing
+			// Three columns of text below the carousel
+			.row
+				.col-lg-4
+					img.img-circle(src='/images/marketing1.jpg', alt='Generic placeholder image', width='140', height='140')
+					h2 Heading
+					p
+						| Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+					p
+						a.btn.btn-default(href='#', role='button') View details »
+				.col-lg-4
+					img.img-circle(src='/images/marketing2.jpg', alt='Generic placeholder image', width='140', height='140')
+					h2 Heading
+					p
+						| Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+					p
+						a.btn.btn-default(href='#', role='button') View details »
+				.col-lg-4
+					img.img-circle(src='/images/marketing3.jpg', alt='Generic placeholder image', width='140', height='140')
+					h2 Heading
+					p
+						| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+					p
+						a.btn.btn-default(href='#', role='button') View details »
+			// START THE FEATURETTES
+			hr.featurette-divider
+			.row.featurette
+				.col-md-7
+					h2.featurette-heading
+						| First featurette heading. 
+						span.text-muted It'll blow your mind.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+				.col-md-5
+					img.featurette-image.img-responsive.center-block(src='/images/featurette1.jpg', alt='Generic placeholder image')
+			hr.featurette-divider
+			.row.featurette
+				.col-md-7.col-md-push-5
+					h2.featurette-heading
+						| Oh yeah, it's that good. 
+						span.text-muted See for yourself.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+				.col-md-5.col-md-pull-7
+					img.featurette-image.img-responsive.center-block(src='/images/featurette2.jpg', alt='Generic placeholder image')
+			hr.featurette-divider
+			.row.featurette
+				.col-md-7
+					h2.featurette-heading
+						| And lastly, this one. 
+						span.text-muted Checkmate.
+					p.lead
+						| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+				.col-md-5
+					img.featurette-image.img-responsive.center-block(src='/images/featurette3.jpg', alt='Generic placeholder image')
+			hr.featurette-divider
+			// /END THE FEATURETTES
+			// FOOTER
+			footer
+				p.pull-right
+					a(href='#') Back to top
+				p
+					| © 2014 Company, Inc. · 
+					a(href='#') Privacy
+					|  · 
+					a(href='#') Terms
+
+
+
+		//  Bootstrap core JavaScript
+		// ================================================== 
+		// Placed at the end of the document so the pages load faster
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
