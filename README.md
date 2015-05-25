@@ -1,5 +1,5 @@
 # jadebootstrap-seed
-[JADE](http://jade-lang.com)-[Bootstrap](http://getbootstrap.com) boilerplate project for [NodeJS](http://nodejs.org/) using [Express](http://expressjs.com) middleware
+[JADE-Bootstrap](http://rajasegar.github.io/JADE-Bootstrap/) boilerplate project for [NodeJS](http://nodejs.org/) using [Express](http://expressjs.com) middleware
 
 ## Quick Start
 
