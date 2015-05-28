@@ -1,6 +1,7 @@
-extends layouts/offcanvas
+extends layouts/starter
 
 block content
-  h1= title
-  p Welcome to #{title}
-  +alert-info("This is a sample info alert.")
+	.container
+		h1= title
+		p Welcome to #{title}
+		+alert-info("This is a sample info alert.")
