@@ -1,0 +1,26 @@
+//- table mixins
+mixin table(data,type)
+	table.table(class="#{type}")
+		each row,index in data
+			if(index === 0)
+				thead
+					tr
+						each head,i in row
+							th #{head}
+			else
+				tbody
+					tr
+						each col,j in row
+							td #{col}
+	
+mixin table-striped(data)
+	+table(data,"table-striped")
+
+mixin table-bordered(data)
+	+table(data,"table-bordered")
+
+mixin table-hover(data)
+	+table(data,"table-hover")
+
+mixin table-condensed(data)
+	+table(data,"table-condensed")
