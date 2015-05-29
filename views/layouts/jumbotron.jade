@@ -1,72 +1,53 @@
-include ../bootstrap
-doctype html
-head
-html(lang="en")
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-  meta(name='description', content='')
-  meta(name='author', content='')
-  link(rel='icon', href='../../favicon.ico')
-  title Jumbotron Template for Bootstrap
-  // Bootstrap core CSS
-  link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-  // Custom styles for this template
-  link(href='/css/jumbotron.css', rel='stylesheet')
-nav.navbar.navbar-inverse.navbar-fixed-top
-  .container
-    .navbar-header
-      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='#') Project name
-    #navbar.navbar-collapse.collapse
-      form.navbar-form.navbar-right
-        .form-group
-          input.form-control(type='text', placeholder='Email')
-        .form-group
-          input.form-control(type='password', placeholder='Password')
-        button.btn.btn-success(type='submit') Sign in
-    // /.navbar-collapse
-// Main jumbotron for a primary marketing message or call to action
-.jumbotron
-  .container
-    h1 Hello, world!
-    p
-      | This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-    p
-      a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
-.container
-  // Example row of columns
-  .row
-    .col-md-4
-      h2 Heading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-md-4
-      h2 Heading
-      p
-        | Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-    .col-md-4
-      h2 Heading
-      p
-        | Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      p
-        a.btn.btn-default(href='#', role='button') View details »
-  hr
-  footer
-    p © Company 2014
-// /container
-//
-  Bootstrap core JavaScript
-  ==================================================
-// Placed at the end of the document so the pages load faster
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+extends ../layout
+append styles
+	// Custom styles for this template
+	link(href='/css/jumbotron.css', rel='stylesheet')
+block body
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Project name
+			#navbar.navbar-collapse.collapse
+				form.navbar-form.navbar-right
+					.form-group
+						input.form-control(type='text', placeholder='Email')
+					.form-group
+						input.form-control(type='password', placeholder='Password')
+					button.btn.btn-success(type='submit') Sign in
+
+	.jumbotron
+		.container
+			h1 Hello, world!
+			p
+				| This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+			p
+				a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
+	.container
+		.row
+			.col-md-4
+				h2 Heading
+				p
+					| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-md-4
+				h2 Heading
+				p
+					| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-md-4
+				h2 Heading
+				p
+					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+		hr
+		footer
+			p © Company 2014
+	block content

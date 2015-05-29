@@ -1,7 +1,9 @@
-extends layouts/starter
+extends layouts/carousel
+
 
 block content
 	.container
 		h1= title
 		p Welcome to #{title}
 		+alert-info("This is a sample info alert.")
+		+carousel("myCarousel",[{image:"/images/carousel1.jpg",h1:"Example headline",p:"Note: If you're viewing this page via a codefile:///code URL, the 'next' and 'previous' Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.",button:{caption:"Sign up today",url:"#"}},{image:"/images/carousel2.jpg",h1:"Another example headline",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Learn more",url:"#"}},	{image:"/images/carousel3.jpg",h1:"One more for good measure.",p:"Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.",button:{caption:"Browse gallery",url:"#"}}])

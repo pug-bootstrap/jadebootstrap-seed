@@ -1,6 +1,7 @@
 extends layout
-
+append styles
+	link(href="/css/style.css", rel="stylesheet")
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+	h1= message
+	h2= error.status
+	pre #{error.stack}
