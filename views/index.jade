@@ -6,10 +6,21 @@ block content
 		h1= title
 		p Welcome to #{title}
 		+alert-info("This is a sample info alert.")
-		+table([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
-		+table-striped([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
-		+table-bordered([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
-		+table-hover([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
-		+table-condensed([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
-		+table([["#","First Name","Last Name","Username"],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]],"table-striped table-bordered")
-		+table([[],["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]],"table-striped table-bordered")
+		+nav("Project name","dropdown_menu")
+		+nav("Project name","dropdown_menu","inverse")
+		+nav("Project name","dropdown_menu")
+			+nav_item("index.html","active") Home
+			+nav_item("about.html") About
+			+nav_item("contact.html") Contact
+		+nav("Project name","dropdown_menu")
+			+nav_item("index.html","active") Home
+			+nav_item("about.html") About
+			+nav_item("contact.html") Contact
+			+nav_item_dropdown("#")(label="Dropdown")
+				+nav_item("#") Action
+				+nav_item("#") Another Action
+				+nav_item("#") Something else here
+				+nav_divider
+				+nav_header Nav header
+				+nav_item("#") Separated link
+				+nav_item("#") One more separated link

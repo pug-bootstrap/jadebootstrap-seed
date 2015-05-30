@@ -1,53 +1,29 @@
-doctype html
-html(lang="en")
-	head
-		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible" ,content="IE=edge")
-		meta(name="viewport", content="width=device-width, initial-scale=1")
-		// The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --
-		meta(name="description", content="")
-		meta(name="author", content="")
-		link(rel="icon", href="../../favicon.ico")
-		title  Cover Template for Bootstrap
-		// !-- Bootstrap core CSS --
-		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-		//	!-- Custom styles for this template --
-		link(href="/css/cover.css", rel="stylesheet")
+extends ../layout
+append styles
+	//	!-- Custom styles for this template --
+	link(href="/css/cover.css", rel="stylesheet")
 
-	body
+block body
+	.site-wrapper
+		.site-wrapper-inner
+			.cover-container
+				.masthead.clearfix
+					.inner
+						h3.masthead-brand Cover
+						nav
+							ul.nav.masthead-nav
+								li.active 
+									a(href="#")	Home
+								li
+									a(href="#") Features
+								li
+									a(href="#") Contact
+				.inner.cover
+					h1.cover-heading Cover your page.
+					p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
+					p.lead
+					a(href="#", class="btn btn-lg btn-default") Learn more
 
-		.site-wrapper
-
-			.site-wrapper-inner
-
-				.cover-container
-
-					.masthead.clearfix
-						.inner
-							h3.masthead-brand Cover
-							nav
-								ul.nav.masthead-nav
-									li.active 
-										a(href="#")	Home
-									li
-										a(href="#") Features
-									li
-										a(href="#") Contact
-                
-
-					.inner.cover
-						h1.cover-heading Cover your page.
-						p.lead Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.
-						p.lead
-						a(href="#", class="btn btn-lg btn-default") Learn more
-
-					.mastfoot
-						.inner
-							p Cover template for <a href="http://getbootstrap.com">Bootstrap </a>, by <a href="https://twitter.com/mdo">@mdo</a>.
-            
-	//!-- Bootstrap core JavaScript
-	//================================================== --
-	//!-- Placed at the end of the document so the pages load faster --
-	script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"/script
-	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
-  
+				.mastfoot
+					.inner
+						p Cover template for <a href="http://getbootstrap.com">Bootstrap </a>, by <a href="https://twitter.com/mdo">@mdo</a>.
