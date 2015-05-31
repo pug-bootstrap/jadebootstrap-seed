@@ -1,29 +1,20 @@
-doctype html
-head
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-  meta(name='description', content='')
-  meta(name='author', content='')
-  link(rel='icon', href='../../favicon.ico')
-  title Sticky Footer Template for Bootstrap
-  // Bootstrap core CSS
-  link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-  // Custom styles for this template
-  link(href='/css/sticky-footer.css', rel='stylesheet')
+extends ../layout
+append styles
+	// Custom styles for this template
+	link(href='/css/sticky-footer.css', rel='stylesheet')
 
-// Begin page content
-.container
-  .page-header
-    h1 Sticky footer
-  p.lead
-    | Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
-  p
-    | Use 
-    a(href='../sticky-footer-navbar') the sticky footer with a fixed navbar
-    |  if need be, too.
-footer.footer
-  .container
-    p.text-muted Place sticky footer content here.
+block body
+	// Begin page content
+	.container
+		.page-header
+			h1 Sticky footer
+		p.lead
+			| Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.
+		p
+			| Use 
+			a(href='../sticky-footer-navbar') the sticky footer with a fixed navbar
+			|  if need be, too.
+	footer.footer
+		.container
+			p.text-muted Place sticky footer content here.
 
