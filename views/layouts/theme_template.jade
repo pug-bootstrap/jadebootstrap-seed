@@ -1,519 +1,351 @@
-include ../bootstrap
-doctype html
-html(lang="en")
-head
-  meta(charset='utf-8')
-  meta(http-equiv='X-UA-Compatible', content='IE=edge')
-  meta(name='viewport', content='width=device-width, initial-scale=1')
-  // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
-  meta(name='description', content='')
-  meta(name='author', content='')
-  link(rel='icon', href='../../favicon.ico')
-  title Theme Template for Bootstrap
-  // Bootstrap core CSS
-  link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
-  // Bootstrap theme
-  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
-  // Custom styles for this template
-  link(href='/css/theme.css', rel='stylesheet')
-// Fixed navbar
-nav.navbar.navbar-inverse.navbar-fixed-top
-  .container
-    .navbar-header
-      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='#') Bootstrap theme
-    #navbar.navbar-collapse.collapse
-      ul.nav.navbar-nav
-        li.active
-          a(href='#') Home
-        li
-          a(href='#about') About
-        li
-          a(href='#contact') Contact
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-            | Dropdown 
-            span.caret
-          ul.dropdown-menu(role='menu')
-            li
-              a(href='#') Action
-            li
-              a(href='#') Another action
-            li
-              a(href='#') Something else here
-            li.divider
-            li.dropdown-header Nav header
-            li
-              a(href='#') Separated link
-            li
-              a(href='#') One more separated link
-    // /.nav-collapse
-.container.theme-showcase(role='main')
-  // Main jumbotron for a primary marketing message or call to action
-  .jumbotron
-    h1 Theme example
-    p
-      | This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.
-  .page-header
-    h1 Buttons
-  p
-    button.btn.btn-lg.btn-default(type='button') Default
-    button.btn.btn-lg.btn-primary(type='button') Primary
-    button.btn.btn-lg.btn-success(type='button') Success
-    button.btn.btn-lg.btn-info(type='button') Info
-    button.btn.btn-lg.btn-warning(type='button') Warning
-    button.btn.btn-lg.btn-danger(type='button') Danger
-    button.btn.btn-lg.btn-link(type='button') Link
-  p
-    button.btn.btn-default(type='button') Default
-    button.btn.btn-primary(type='button') Primary
-    button.btn.btn-success(type='button') Success
-    button.btn.btn-info(type='button') Info
-    button.btn.btn-warning(type='button') Warning
-    button.btn.btn-danger(type='button') Danger
-    button.btn.btn-link(type='button') Link
-  p
-    button.btn.btn-sm.btn-default(type='button') Default
-    button.btn.btn-sm.btn-primary(type='button') Primary
-    button.btn.btn-sm.btn-success(type='button') Success
-    button.btn.btn-sm.btn-info(type='button') Info
-    button.btn.btn-sm.btn-warning(type='button') Warning
-    button.btn.btn-sm.btn-danger(type='button') Danger
-    button.btn.btn-sm.btn-link(type='button') Link
-  p
-    button.btn.btn-xs.btn-default(type='button') Default
-    button.btn.btn-xs.btn-primary(type='button') Primary
-    button.btn.btn-xs.btn-success(type='button') Success
-    button.btn.btn-xs.btn-info(type='button') Info
-    button.btn.btn-xs.btn-warning(type='button') Warning
-    button.btn.btn-xs.btn-danger(type='button') Danger
-    button.btn.btn-xs.btn-link(type='button') Link
-  .page-header
-    h1 Tables
-  .row
-    .col-md-6
-      table.table
-        thead
-          tr
-            th #
-            th First Name
-            th Last Name
-            th Username
-        tbody
-          tr
-            td 1
-            td Mark
-            td Otto
-            td @mdo
-          tr
-            td 2
-            td Jacob
-            td Thornton
-            td @fat
-          tr
-            td 3
-            td Larry
-            td the Bird
-            td @twitter
-    .col-md-6
-      table.table.table-striped
-        thead
-          tr
-            th #
-            th First Name
-            th Last Name
-            th Username
-        tbody
-          tr
-            td 1
-            td Mark
-            td Otto
-            td @mdo
-          tr
-            td 2
-            td Jacob
-            td Thornton
-            td @fat
-          tr
-            td 3
-            td Larry
-            td the Bird
-            td @twitter
-  .row
-    .col-md-6
-      table.table.table-bordered
-        thead
-          tr
-            th #
-            th First Name
-            th Last Name
-            th Username
-        tbody
-          tr
-            td(rowspan='2') 1
-            td Mark
-            td Otto
-            td @mdo
-          tr
-            td Mark
-            td Otto
-            td @TwBootstrap
-          tr
-            td 2
-            td Jacob
-            td Thornton
-            td @fat
-          tr
-            td 3
-            td(colspan='2') Larry the Bird
-            td @twitter
-    .col-md-6
-      table.table.table-condensed
-        thead
-          tr
-            th #
-            th First Name
-            th Last Name
-            th Username
-        tbody
-          tr
-            td 1
-            td Mark
-            td Otto
-            td @mdo
-          tr
-            td 2
-            td Jacob
-            td Thornton
-            td @fat
-          tr
-            td 3
-            td(colspan='2') Larry the Bird
-            td @twitter
-  .page-header
-    h1 Thumbnails
-  img.img-thumbnail(src='images/thumb.jpg', alt='A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera')
-  .page-header
-    h1 Labels
-  h1
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  h2
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  h3
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  h4
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  h5
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  h6
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  p
-    span.label.label-default Default
-    span.label.label-primary Primary
-    span.label.label-success Success
-    span.label.label-info Info
-    span.label.label-warning Warning
-    span.label.label-danger Danger
-  .page-header
-    h1 Badges
-  p
-    a(href='#')
-      | Inbox 
-      span.badge 42
-  ul.nav.nav-pills(role='tablist')
-    li.active(role='presentation')
-      a(href='#')
-        | Home 
-        span.badge 42
-    li(role='presentation')
-      a(href='#') Profile
-    li(role='presentation')
-      a(href='#')
-        | Messages 
-        span.badge 3
-  .page-header
-    h1 Dropdown menus
-  .dropdown.theme-dropdown.clearfix
-    a#dropdownMenu1.sr-only.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-      | Dropdown 
-      span.caret
-    ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
-      li.active(role='presentation')
-        a(role='menuitem', tabindex='-1', href='#') Action
-      li(role='presentation')
-        a(role='menuitem', tabindex='-1', href='#') Another action
-      li(role='presentation')
-        a(role='menuitem', tabindex='-1', href='#') Something else here
-      li.divider(role='presentation')
-      li(role='presentation')
-        a(role='menuitem', tabindex='-1', href='#') Separated link
-  .page-header
-    h1 Navs
-  ul.nav.nav-tabs(role='tablist')
-    li.active(role='presentation')
-      a(href='#') Home
-    li(role='presentation')
-      a(href='#') Profile
-    li(role='presentation')
-      a(href='#') Messages
-  ul.nav.nav-pills(role='tablist')
-    li.active(role='presentation')
-      a(href='#') Home
-    li(role='presentation')
-      a(href='#') Profile
-    li(role='presentation')
-      a(href='#') Messages
-  .page-header
-    h1 Navbars
-  nav.navbar.navbar-default
-    .container
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='#') Project name
-      .navbar-collapse.collapse
-        ul.nav.navbar-nav
-          li.active
-            a(href='#') Home
-          li
-            a(href='#about') About
-          li
-            a(href='#contact') Contact
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-              | Dropdown 
-              span.caret
-            ul.dropdown-menu(role='menu')
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider
-              li.dropdown-header Nav header
-              li
-                a(href='#') Separated link
-              li
-                a(href='#') One more separated link
-      // /.nav-collapse
-  nav.navbar.navbar-inverse
-    .container
-      .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-          span.sr-only Toggle navigation
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
-        a.navbar-brand(href='#') Project name
-      .navbar-collapse.collapse
-        ul.nav.navbar-nav
-          li.active
-            a(href='#') Home
-          li
-            a(href='#about') About
-          li
-            a(href='#contact') Contact
-          li.dropdown
-            a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
-              | Dropdown 
-              span.caret
-            ul.dropdown-menu(role='menu')
-              li
-                a(href='#') Action
-              li
-                a(href='#') Another action
-              li
-                a(href='#') Something else here
-              li.divider
-              li.dropdown-header Nav header
-              li
-                a(href='#') Separated link
-              li
-                a(href='#') One more separated link
-      // /.nav-collapse
-  .page-header
-    h1 Alerts
-  .alert.alert-success(role='alert')
-    strong Well done!
-    |  You successfully read this important alert message.
-  .alert.alert-info(role='alert')
-    strong Heads up!
-    |  This alert needs your attention, but it's not super important.
-  .alert.alert-warning(role='alert')
-    strong Warning!
-    |  Best check yo self, you're not looking too good.
-  .alert.alert-danger(role='alert')
-    strong Oh snap!
-    |  Change a few things up and try submitting again.
-  .page-header
-    h1 Progress bars
-  .progress
-    .progress-bar(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%;')
-      span.sr-only 60% Complete
-  .progress
-    .progress-bar.progress-bar-success(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width: 40%')
-      span.sr-only 40% Complete (success)
-  .progress
-    .progress-bar.progress-bar-info(role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100', style='width: 20%')
-      span.sr-only 20% Complete
-  .progress
-    .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
-      span.sr-only 60% Complete (warning)
-  .progress
-    .progress-bar.progress-bar-danger(role='progressbar', aria-valuenow='80', aria-valuemin='0', aria-valuemax='100', style='width: 80%')
-      span.sr-only 80% Complete (danger)
-  .progress
-    .progress-bar.progress-bar-striped(role='progressbar', aria-valuenow='60', aria-valuemin='0', aria-valuemax='100', style='width: 60%')
-      span.sr-only 60% Complete
-  .progress
-    .progress-bar.progress-bar-success(style='width: 35%')
-      span.sr-only 35% Complete (success)
-    .progress-bar.progress-bar-warning(style='width: 20%')
-      span.sr-only 20% Complete (warning)
-    .progress-bar.progress-bar-danger(style='width: 10%')
-      span.sr-only 10% Complete (danger)
-  .page-header
-    h1 List groups
-  .row
-    .col-sm-4
-      ul.list-group
-        li.list-group-item Cras justo odio
-        li.list-group-item Dapibus ac facilisis in
-        li.list-group-item Morbi leo risus
-        li.list-group-item Porta ac consectetur ac
-        li.list-group-item Vestibulum at eros
-    // /.col-sm-4
-    .col-sm-4
-      .list-group
-        a.list-group-item.active(href='#')
-          | Cras justo odio
-        a.list-group-item(href='#') Dapibus ac facilisis in
-        a.list-group-item(href='#') Morbi leo risus
-        a.list-group-item(href='#') Porta ac consectetur ac
-        a.list-group-item(href='#') Vestibulum at eros
-    // /.col-sm-4
-    .col-sm-4
-      .list-group
-        a.list-group-item.active(href='#')
-          h4.list-group-item-heading List group item heading
-          p.list-group-item-text
-            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-        a.list-group-item(href='#')
-          h4.list-group-item-heading List group item heading
-          p.list-group-item-text
-            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-        a.list-group-item(href='#')
-          h4.list-group-item-heading List group item heading
-          p.list-group-item-text
-            | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
-    // /.col-sm-4
-  .page-header
-    h1 Panels
-  .row
-    .col-sm-4
-      .panel.panel-default
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-      .panel.panel-primary
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-    // /.col-sm-4
-    .col-sm-4
-      .panel.panel-success
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-      .panel.panel-info
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-    // /.col-sm-4
-    .col-sm-4
-      .panel.panel-warning
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-      .panel.panel-danger
-        .panel-heading
-          h3.panel-title Panel title
-        .panel-body
-          | Panel content
-    // /.col-sm-4
-  .page-header
-    h1 Wells
-  .well
-    p
-      | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
-  .page-header
-    h1 Carousel
-  #carousel-example-generic.carousel.slide(data-ride='carousel')
-    ol.carousel-indicators
-      li.active(data-target='#carousel-example-generic', data-slide-to='0')
-      li(data-target='#carousel-example-generic', data-slide-to='1')
-      li(data-target='#carousel-example-generic', data-slide-to='2')
-    .carousel-inner(role='listbox')
-      .item.active
-        img(src='/images/slide1.jpg', alt='First slide')
-      .item
-        img(src='/images/slide2.jpg', alt='Second slide')
-      .item
-        img(src='/images/slide3.jpg', alt='Third slide')
-    a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
-      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-      span.sr-only Previous
-    a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
-      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-      span.sr-only Next
-// /container
-//
-  Bootstrap core JavaScript
-  ==================================================
-// Placed at the end of the document so the pages load faster
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
-script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
-script(src='../../assets/js/docs.min.js')
+extends ../bootstrap
+append styles
+	// Bootstrap theme
+	link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css")
+	// Custom styles for this template
+	link(href='../css/theme.css', rel='stylesheet')
+block body
+	// Fixed navbar
+	nav.navbar.navbar-inverse.navbar-fixed-top
+		.container
+			.navbar-header
+				button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+					span.sr-only Toggle navigation
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href='#') Bootstrap theme
+			#navbar.navbar-collapse.collapse
+				ul.nav.navbar-nav
+					li.active
+						a(href='#') Home
+					li
+						a(href='#about') About
+					li
+						a(href='#contact') Contact
+					li.dropdown
+						a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+							| Dropdown 
+							span.caret
+						ul.dropdown-menu(role='menu')
+							li
+								a(href='#') Action
+							li
+								a(href='#') Another action
+							li
+								a(href='#') Something else here
+							li.divider
+							li.dropdown-header Nav header
+							li
+								a(href='#') Separated link
+							li
+								a(href='#') One more separated link
+		
+	.container.theme-showcase(role='main')
+		// Main jumbotron for a primary marketing message or call to action
+		.jumbotron
+			h1 Theme example
+			p
+				| This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.
+		.page-header
+			h1 Buttons
+		p
+			button.btn.btn-lg.btn-default(type='button') Default
+			button.btn.btn-lg.btn-primary(type='button') Primary
+			button.btn.btn-lg.btn-success(type='button') Success
+			button.btn.btn-lg.btn-info(type='button') Info
+			button.btn.btn-lg.btn-warning(type='button') Warning
+			button.btn.btn-lg.btn-danger(type='button') Danger
+			button.btn.btn-lg.btn-link(type='button') Link
+		p
+			button.btn.btn-default(type='button') Default
+			button.btn.btn-primary(type='button') Primary
+			button.btn.btn-success(type='button') Success
+			button.btn.btn-info(type='button') Info
+			button.btn.btn-warning(type='button') Warning
+			button.btn.btn-danger(type='button') Danger
+			button.btn.btn-link(type='button') Link
+		p
+			button.btn.btn-sm.btn-default(type='button') Default
+			button.btn.btn-sm.btn-primary(type='button') Primary
+			button.btn.btn-sm.btn-success(type='button') Success
+			button.btn.btn-sm.btn-info(type='button') Info
+			button.btn.btn-sm.btn-warning(type='button') Warning
+			button.btn.btn-sm.btn-danger(type='button') Danger
+			button.btn.btn-sm.btn-link(type='button') Link
+		p
+			button.btn.btn-xs.btn-default(type='button') Default
+			button.btn.btn-xs.btn-primary(type='button') Primary
+			button.btn.btn-xs.btn-success(type='button') Success
+			button.btn.btn-xs.btn-info(type='button') Info
+			button.btn.btn-xs.btn-warning(type='button') Warning
+			button.btn.btn-xs.btn-danger(type='button') Danger
+			button.btn.btn-xs.btn-link(type='button') Link
+		.page-header
+			h1 Tables
+		.row
+			.col-md-6
+				+table(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
+			.col-md-6
+				+table-striped(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
+		.row
+			.col-md-6
+				+table-bordered(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
+			.col-md-6
+				+table-condensed(["#","First Name","Last Name","Username"],[["1","Mark","Otto","@mdo"],["2","Jacob","Thornton","@fat"],["3","Larry","the Bird","@twitter"]])
+		.page-header
+			h1 Thumbnails
+		img.img-thumbnail(src='../images/thumb.jpg', alt='A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera')
+		.page-header
+			h1 Labels
+		h1
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		h2
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		h3
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		h4
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		h5
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		h6
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		p
+			span.label.label-default Default
+			span.label.label-primary Primary
+			span.label.label-success Success
+			span.label.label-info Info
+			span.label.label-warning Warning
+			span.label.label-danger Danger
+		.page-header
+			h1 Badges
+		p
+			a(href='#')
+				| Inbox 
+				span.badge 42
+		ul.nav.nav-pills(role='tablist')
+			li.active(role='presentation')
+				a(href='#')
+					| Home 
+					span.badge 42
+			li(role='presentation')
+				a(href='#') Profile
+			li(role='presentation')
+				a(href='#')
+					| Messages 
+					span.badge 3
+		.page-header
+			h1 Dropdown menus
+		.dropdown.theme-dropdown.clearfix
+			a#dropdownMenu1.sr-only.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+				| Dropdown 
+				span.caret
+			ul.dropdown-menu(role='menu', aria-labelledby='dropdownMenu1')
+				li.active(role='presentation')
+					a(role='menuitem', tabindex='-1', href='#') Action
+				li(role='presentation')
+					a(role='menuitem', tabindex='-1', href='#') Another action
+				li(role='presentation')
+					a(role='menuitem', tabindex='-1', href='#') Something else here
+				li.divider(role='presentation')
+				li(role='presentation')
+					a(role='menuitem', tabindex='-1', href='#') Separated link
+		.page-header
+			h1 Navs
+		ul.nav.nav-tabs(role='tablist')
+			li.active(role='presentation')
+				a(href='#') Home
+			li(role='presentation')
+				a(href='#') Profile
+			li(role='presentation')
+				a(href='#') Messages
+		ul.nav.nav-pills(role='tablist')
+			li.active(role='presentation')
+				a(href='#') Home
+			li(role='presentation')
+				a(href='#') Profile
+			li(role='presentation')
+				a(href='#') Messages
+		.page-header
+			h1 Navbars
+		nav.navbar.navbar-default
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') Project name
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='#') Home
+						li
+							a(href='#about') About
+						li
+							a(href='#contact') Contact
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+								| Dropdown 
+								span.caret
+							ul.dropdown-menu(role='menu')
+								li
+									a(href='#') Action
+								li
+									a(href='#') Another action
+								li
+									a(href='#') Something else here
+								li.divider
+								li.dropdown-header Nav header
+								li
+									a(href='#') Separated link
+								li
+									a(href='#') One more separated link
+
+		nav.navbar.navbar-inverse
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') Project name
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='#') Home
+						li
+							a(href='#about') About
+						li
+							a(href='#contact') Contact
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-expanded='false')
+								| Dropdown 
+								span.caret
+							ul.dropdown-menu(role='menu')
+								li
+									a(href='#') Action
+								li
+									a(href='#') Another action
+								li
+									a(href='#') Something else here
+								li.divider
+								li.dropdown-header Nav header
+								li
+									a(href='#') Separated link
+								li
+									a(href='#') One more separated link
+
+		.page-header
+			h1 Alerts
+		+alert-success("<strong>Well done!</strong> You successfully read this important alert message.")
+		+alert-info("<strong>Heads up!</strong> This alert needs your attention, but it's not super important.")
+		+alert-warning("<strong>Warning!</strong> Best check yo self, you're not looking too good.")
+		+alert-danger("<strong>Oh snap!</strong> Change a few things up and try submitting again.")
+		.page-header
+			h1 Progress bars
+		+progress-bar(60)
+		+progress-bar-info(20)
+		+progress-bar-warning(60)
+		+progress-bar-danger(80)
+		+progress-bar-striped(60)
+		.progress
+			.progress-bar.progress-bar-success(style='width: 35%')
+				span.sr-only 35% Complete (success)
+			.progress-bar.progress-bar-warning(style='width: 20%')
+				span.sr-only 20% Complete (warning)
+			.progress-bar.progress-bar-danger(style='width: 10%')
+				span.sr-only 10% Complete (danger)
+		.page-header
+			h1 List groups
+		.row
+			.col-sm-4
+				ul.list-group
+					li.list-group-item Cras justo odio
+					li.list-group-item Dapibus ac facilisis in
+					li.list-group-item Morbi leo risus
+					li.list-group-item Porta ac consectetur ac
+					li.list-group-item Vestibulum at eros
+			// /.col-sm-4
+			.col-sm-4
+				.list-group
+					a.list-group-item.active(href='#')
+						| Cras justo odio
+					a.list-group-item(href='#') Dapibus ac facilisis in
+					a.list-group-item(href='#') Morbi leo risus
+					a.list-group-item(href='#') Porta ac consectetur ac
+					a.list-group-item(href='#') Vestibulum at eros
+			// /.col-sm-4
+			.col-sm-4
+				.list-group
+					a.list-group-item.active(href='#')
+						h4.list-group-item-heading List group item heading
+						p.list-group-item-text
+							| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+					a.list-group-item(href='#')
+						h4.list-group-item-heading List group item heading
+						p.list-group-item-text
+							| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+					a.list-group-item(href='#')
+						h4.list-group-item-heading List group item heading
+						p.list-group-item-text
+							| Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+		// /.col-sm-4
+		.page-header
+			h1 Panels
+		.row
+			.col-sm-4
+				+panel-default("Panel title")
+					| Panel content
+				+panel-primary("Panel title")
+					| Panel content
+			.col-sm-4
+				+panel-success("Panel title")
+					| Panel content
+				+panel-info("Panel title")
+					| Panel content
+			.col-sm-4
+				+panel-warning("Panel title")
+					| Panel content
+				+panel-danger("Panel title")
+					| Panel content
+		.page-header
+			h1 Wells
+		.well
+			p
+				| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.
+		.page-header
+			h1 Carousel
+		+carousel("example-generic",[{image:'../images/carousel/slide1.jpg'},{image:'../images/carousel/slide2.jpg'},{image:'../images/carousel/slide3.jpg',}])

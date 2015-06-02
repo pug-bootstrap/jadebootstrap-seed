@@ -1,18 +1,18 @@
-extends layouts/non-responsive
+extends layouts/starter
 
 
-block content
+block body
 	.container
 		h1= title
 		p Welcome to #{title}
 		+alert-info("This is a sample info alert.")
-		+nav("Project name","dropdown_menu")
-		+nav("Project name","dropdown_menu","inverse")
-		+nav("Project name","dropdown_menu")
+		+navbar("Project name","dropdown_menu")
+		+navbar("Project name","dropdown_menu","inverse")
+		+navbar("Project name","dropdown_menu")
 			+nav_item("index.html","active") Home
 			+nav_item("about.html") About
 			+nav_item("contact.html") Contact
-		+nav("Project name","dropdown_menu")
+		+navbar("Project name","dropdown_menu")
 			+nav_item("index.html","active") Home
 			+nav_item("about.html") About
 			+nav_item("contact.html") Contact

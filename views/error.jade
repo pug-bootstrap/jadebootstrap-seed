@@ -1,7 +1,7 @@
-extends layout
+extends layouts/starter
 append styles
 	link(href="/css/style.css", rel="stylesheet")
-block content
+block body
 	h1= message
 	h2= error.status
 	pre #{error.stack}
