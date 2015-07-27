@@ -1,7 +1,7 @@
-extends layouts/starter
+extends ../node_modules/jade-bootstrap/layouts/starter
 
 
-block body
+append body
 	.container
 		h1= title
 		p Welcome to #{title}
@@ -24,3 +24,4 @@ block body
 				+nav_header Nav header
 				+nav_item("#") Separated link
 				+nav_item("#") One more separated link
+	h1 Rajasegar
