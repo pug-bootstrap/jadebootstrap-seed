@@ -19,4 +19,3 @@ $ npm start
   * Pug set as the default Template engine
   * Focus on high performance
   * Super-speed development using Pug mixins
-  
