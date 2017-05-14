@@ -16,7 +16,7 @@ $ npm start
 ## Features
 
   * Bootstrap set as the default UI framework
-  * JADE set as the default Template engine
+  * Pug set as the default Template engine
   * Focus on high performance
-  * Super-speed development using JADE mixins
+  * Super-speed development using Pug mixins
   
